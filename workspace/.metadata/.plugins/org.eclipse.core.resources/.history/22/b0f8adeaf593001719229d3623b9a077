@@ -1,0 +1,38 @@
+package view;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+
+public class MainController {
+	
+	@FXML
+	private TextArea ta_report;
+	
+	@FXML
+	private Button b_browse;
+	
+	private FileChooser fc;
+	
+	//Action methods
+	@FXML
+	private void action_buttonClickBrowse() {
+		
+	}
+	
+	//Init
+	@FXML
+	public void initialize() {
+		
+		fc = new FileChooser();
+		fc.setTitle("Open lua source file");
+		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Lua source file (*.lua)", "*.lua"););
+		ExtensionFilter extFilter = 
+		
+		ta_report.setEditable(false);
+		
+	}
+
+}

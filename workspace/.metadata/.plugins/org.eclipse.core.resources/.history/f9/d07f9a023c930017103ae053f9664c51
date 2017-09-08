@@ -1,0 +1,14 @@
+package main;
+
+import org.omg.CORBA.portable.ApplicationException;
+
+public class Main extends ApplicationException {
+
+	private static final long serialVersionUID = 1L;
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package view;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
+public class MainController {
+	@FXML
+	private Box box;
+	
+	@FXML
+	public void initialize() {
+		ta_code.appendText("HELLO");
+		
+	}
+
+}

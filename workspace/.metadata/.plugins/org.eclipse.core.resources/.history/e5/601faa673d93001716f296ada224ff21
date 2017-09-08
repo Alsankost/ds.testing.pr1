@@ -1,0 +1,26 @@
+package main;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+	private static Parent root;
+	
+	public static Parent getRoot() {
+		return root;
+	}
+	
+	public static void main(String[] args) {	
+		launch();
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		root = FXMLLoader.load(getClass().getResource("/application/view/MainMenu.fxml"));
+		
+	}
+
+}

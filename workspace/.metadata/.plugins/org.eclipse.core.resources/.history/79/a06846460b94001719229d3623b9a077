@@ -1,0 +1,76 @@
+package view;
+
+import java.io.File;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import main.Main;
+
+public class MainController {
+	
+	@FXML
+	private Button b_open;
+	
+	@FXML
+	private Button b_browse;
+	
+	@FXML
+	private Button b_test;
+	
+	@FXML
+	private TextField tf_path;
+	
+	@FXML
+	private TextArea ta_code;
+	
+	@FXML
+	private ListView<Error> lw_errors;
+	
+	private FileChooser fc;
+	
+	private File file = null;
+	
+	private ObservableList<Error> errors;
+	
+	//Action methods
+	@FXML
+	private void action_buttonClickOpen() {
+		
+	}
+	
+	@FXML
+	private void action_buttonClickBrowse() {
+		file = fc.showOpenDialog(Main.getPrimaryStage());
+		if (file != null) {
+			tf_path.setText(file.getPath());
+		}
+	}
+	
+	@FXML
+	private void action_buttonClickTest() {
+		
+	}
+	
+	//Init
+	@FXML
+	public void initialize() {
+		
+		fc = new FileChooser();
+		fc.setTitle("Open lua source file");
+		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Lua source file (*.lua)", "*.lua"));
+		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("All (*.*)", "*.*"));
+		
+		errors = FXCollections.observableArrayList();
+		lw_errors.setItems(errors);
+		
+		ta_code.setEditable(false);
+		
+	}
+
+}

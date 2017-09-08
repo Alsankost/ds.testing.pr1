@@ -1,0 +1,11 @@
+package model;
+
+public class Error {
+	private int pos, len;
+	private String description;
+	
+	public int getPos() {
+		return pos;
+	}
+
+}

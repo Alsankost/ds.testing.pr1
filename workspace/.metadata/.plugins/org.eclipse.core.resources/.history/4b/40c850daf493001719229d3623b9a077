@@ -1,0 +1,22 @@
+package view;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.shape.Box;
+import javafx.scene.transform.Rotate;
+import javafx.scene.transform.Translate;
+
+public class MainController {
+	@FXML
+	private TextArea ta_report;
+	
+	@FXML
+	private Button b_browse;
+	
+	@FXML
+	public void initialize() {
+		ta_report.setEditable(false);
+		
+	}
+
+}

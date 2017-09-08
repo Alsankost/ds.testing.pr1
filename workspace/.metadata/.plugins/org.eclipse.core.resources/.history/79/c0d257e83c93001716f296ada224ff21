@@ -1,0 +1,18 @@
+package main;
+
+
+public class Main extends Application {
+
+	public Main(String id, InputStream ins) {
+		super(id, ins);
+		// TODO Auto-generated constructor stub
+	}
+
+	private static final long serialVersionUID = 1L;
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
